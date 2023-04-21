@@ -1,0 +1,28 @@
+Server started at http://localhost:8181
+received input = 
+{ ticker: 'null',
+  titl: '2.5',
+  func: '0.0',
+  total_pay: '-1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+received input = 
+{ ticker: 'null',
+  titl: '2.5',
+  func: '0.0',
+  total_pay: '-1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+{ salary: '8', max_score: '12', percentile: 62.5 }
+{ salary: '8', max_score: '12', percentile: 62.5 }
+received input = 
+{ ticker: 'null',
+  titl: '2.5',
+  func: '0.0',
+  total_pay: '-1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+{ salary: '8', max_score: '12', percentile: 62.5 }

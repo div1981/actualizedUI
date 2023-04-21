@@ -1,0 +1,228 @@
+<html>
+  <head>
+      <script src="  https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+
+      <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      
+<!-- 
+https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js
+https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js -->
+
+
+      <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+      <link href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  
+      <style>
+
+        
+      </style>
+      <script>
+          $(document).ready(function() {
+            $( "#tabs" ).tabs();
+            var table =  $('#report').DataTable( {
+                "ajax": {
+                  "url": "/generateReport",
+                  "dataSrc": function (json) {
+                      var return_data = new Array();
+                      for(var i=0;i< json.length; i++){
+                         let data = json[i].data;
+                         //console.log(json[i]);
+                         json[i].uuid = (json[i].uuid == 'undefined') ? "" : json[i].uuid ;
+                         if(data){
+                            let arr = data.split(";");
+                            if(arr.length > 1){
+                                data = arr[1];
+                            }
+                            data = data.replace('https://actualized.eastus.cloudapp.azure.com:9192/getCompensationPercentileForTicker?','');
+                            data = data.replace('https://actualized.eastus.cloudapp.azure.com:9192/getCompensationPercentileForInput?','');
+                            data = data.replace('https://23.101.132.73:9192/getCompensationPercentileForTicker?','');
+                            data = data.replace('https://23.101.132.73:9192/getCompensationPercentileForInput?','');
+                            json[i].data = data;
+                          }
+                         return_data.push(json[i]);
+                      }
+                      return return_data;
+                    }
+                },
+                "columns": [
+                      { "data": "insertdate" },
+                      { "data": "ipaddress" },
+                      { "data": "uuid" },
+                      { "data": "hostname" },
+                      { "data": "data" },
+                      { "data": "useragent" }
+                 ],
+                order: [[0, 'desc']],
+                dom: 'lBfrtip',
+                buttons: [
+                    'csv', 'excel', 'pdf', 'print'
+                ]
+              } );
+
+              var jobtable =  $('#jobreport').DataTable( {
+                "ajax": {
+                  "url": "/generateJobReport",
+                  "dataSrc": function (json) {
+                      var return_data = new Array();
+                      for(var i=0;i< json.length; i++){
+                         let data = json[i].data;
+                         console.log(json[i]);
+                         json[i].uuid = (json[i].uuid == 'undefined') ? "" : json[i].uuid ;
+                         return_data.push(json[i]);
+                      }
+                      return return_data;
+                    }
+                },
+                "columns": [
+                      { "data": "insertdate" },
+                      { "data": "ipaddress" },
+                      { "data": "uuid" },
+                      { "data": "useragent" }
+                 ],
+                order: [[0, 'desc']],
+                dom: 'lBfrtip',
+                buttons: [
+                    'csv', 'excel', 'pdf', 'print'
+                ]
+              } );
+
+              var emailtable =  $('#emailreport').DataTable( {
+                "ajax": {
+                  "url": "/generateEmailReport",
+                  "dataSrc": function (json) {
+                      var return_data = new Array();
+                      for(let i=0;i< json.length; i++){
+                         json[i].linkedin = (json[i].linkedin == 'undefined') ? "" : json[i].linkedin ;
+                         return_data.push(json[i]);
+                      }
+                      return return_data;
+                    }
+                },
+                "columns": [
+                      { "data": "insertdate" },
+                      { "data": "ipaddress" },
+                      { "data": "email" },
+                      { "data": "linkedin" },
+                      { "data": "useragent" }
+                 ],
+                order: [[0, 'desc']],
+                dom: 'lBfrtip',
+                buttons: [
+                    'csv', 'excel', 'pdf', 'print'
+                ]
+              } );
+
+              $.ajax({
+                  url: "/getClickReport",
+                  success: function(result){
+                      console.log("The report result is " , result);
+                      $("#clicked").html(result.clicked);
+                      $("#checked").html(result.checked);
+                      $("#ipclicked").html(result.ipclicked);
+                      $("#ipchecked").html(result.ipchecked);
+                  }
+              });
+
+              $.ajax({
+                  url: "/getJobReport",
+                  success: function(result){
+                      console.log("The report result is " , result);
+                      let html = "";
+                      for(var i=0;i< result.length; i++){
+                         html += 'The No of people visited from ' + result[i].uuid + '  :  <b> <span>' + result[i].count + '</span> </b> <br><br/>';
+                      }
+                      console.log(html);
+                      $("#jobReport").html(html);
+                    //   $("#homejob").html(result.homejob);
+                    //   $("#displayjob").html(result.displayjob);
+                    //   $("#uuidjob").html(result.uuidjob);
+                     
+                  }
+              });
+
+              
+          } );
+        
+      </script>
+  </head>
+   <body>
+    <div style="overflow: hidden;width:100%;height:50px;background-color: azure;"><a href="https://www.actualized.io/" target="_self">
+      <img src="https://d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_104w016000000000000028.png" alt="" loading="lazy" data-src-desktop-1x="https://d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_104w016000000000000028.png" data-src-desktop-2x="//d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_1000000000000000000028.png" data-src-mobile-1x="//d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_103600r000000000000028.png" data-src-mobile-2x="//d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_106c01i000000000000028.png" data-src-mobile-3x="//d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_109i029000000000000028.png" srcset="https://d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_104w016000000000000028.png 1x, //d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_1000000000000000000028.png 2x"> <img style="width:80px;height:25px;margin-top:5px;" src="images/Beta.jpg" loading="lazy" data-src-desktop-1x="images/Beta.jpg" data-src-desktop-2x="images/Beta.jpg" data-src-mobile-1x="images/Beta.jpg" data-src-mobile-2x="images/Beta.jpg" data-src-mobile-3x="images/Beta.jpg" srcset="images/Beta.jpg 1x, images/Beta.jpg 2x"></a> 
+      <span style="font-size: 24px;font-weight: bold;margin-left:25%;color:blue">Audit Reports</span>
+    </div>
+    <br/><br/>
+    <div id="tabs">
+        <ul>
+            <li><a href="#fragment-1"><span>Check Score Report</span></a></li>
+            <li><a href="#fragment-2"><span>Job Report</span></a></li>
+            <li><a href="#fragment-3"><span>Email Report</span></a></li>
+        </ul>
+        <div id="fragment-1" class="tabcontent">
+            <table id="report" class="display responsive nowrap cell-border" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Ip Address</th>
+                        <th>UUID</th>
+                        <th>Host Name</th>
+                        <th>Data</th>
+                        <th>User Agent</th>
+                    </tr>
+                </thead>
+                
+            </table>
+            <br><br/>
+            <div style="text-align: center;">
+                <b>The Report for the UUID : 50419a2b-6b31-5f01-8057-1b6bb9f42d44</b> <br><br/>
+                The No of people visited the site  :  <b> <span id="clicked"> </span> </b> <br><br/>
+                The No of people entered the data  :  <b> <span id="checked"> </span> </b><br/><br/>
+                <b>The Report for the user who visited without uuid</b> <br><br/>
+                The No of people visited the site  :  <b> <span id="ipclicked"> </span> </b> <br><br/>
+                The No of people entered the data  :  <b> <span id="ipchecked"> </span> </b>
+            </div> 
+        </div>
+        <div id="fragment-2" class="tabcontent">
+            <table id="jobreport" class="display responsive nowrap cell-border" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Ip Address</th>
+                        <th>UUID</th>
+                        <th>User Agent</th>
+                    </tr>
+                </thead>
+                
+            </table>
+            <br><br/>
+            <div style="text-align: center;" id="jobReport">
+                
+            </div>
+        </div>
+
+        <div id="fragment-3" class="tabcontent">
+            <table id="emailreport" class="display responsive nowrap cell-border" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Ip Address</th>
+                        <th>Email</th>
+                        <th>Linked In</th>
+                        <th>User Agent</th>
+                    </tr>
+                </thead>
+                
+            </table>
+            <br><br/>
+          
+        </div>
+  </body>
+
+
+</html>

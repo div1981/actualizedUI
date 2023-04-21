@@ -1,0 +1,4 @@
+Server started at http://localhost:9191
+received input = 
+{ ticker: 'T' }
+getCompanyPercentile:: ticker=T,roi=null,sector=null,industry=null,total_revenue=null,gross_margins=null,revenue_growth=null

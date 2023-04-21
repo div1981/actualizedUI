@@ -1,0 +1,5 @@
+GUI
+nohup node /home/actualized/actualizedUI/app.js 2>&1 > /home/actualized/actualizedUI/appjs.log &
+
+Backend
+nohup /home/actualized/actualizedUI/cron.sh &

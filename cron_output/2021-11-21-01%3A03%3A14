@@ -1,0 +1,695 @@
+Cron started at Sun Nov 21 2021 01:03:14 GMT+0000 (Coordinated Universal Time)
+-------------------
+WIZ - defaultKeyStatistics
+-------------------
+GKOS - financialData
+-------------------
+HMST - earnings
+-------------------
+INTF - assetProfile
+-------------------
+THACU - defaultKeyStatistics
+-------------------
+CADE - financialData
+-------------------
+CRESY - earnings
+-------------------
+AFIN - assetProfile
+-------------------
+ZTAQU - defaultKeyStatistics
+-------------------
+AGI - financialData
+-------------------
+UNIT - earnings
+-------------------
+MCR - assetProfile
+-------------------
+IDIV - defaultKeyStatistics
+-------------------
+XDQQ - financialData
+-------------------
+PBJ - earnings
+-------------------
+ATMR - assetProfile
+-------------------
+PAG - defaultKeyStatistics
+-------------------
+QIPT - financialData
+-------------------
+MBOX - earnings
+-------------------
+VMW - assetProfile
+-------------------
+PGRE - defaultKeyStatistics
+-------------------
+IMCR - financialData
+-------------------
+JDIV - earnings
+-------------------
+MYC - assetProfile
+-------------------
+FIX - defaultKeyStatistics
+-------------------
+HUBG - financialData
+-------------------
+CRT - earnings
+-------------------
+MUFG - assetProfile
+-------------------
+ROBO - defaultKeyStatistics
+-------------------
+IPW - financialData
+-------------------
+ESLT - earnings
+-------------------
+RYN - assetProfile
+-------------------
+BKTI - defaultKeyStatistics
+-------------------
+VT - financialData
+-------------------
+RFL - earnings
+-------------------
+SPEM - assetProfile
+-------------------
+WHF - defaultKeyStatistics
+-------------------
+GHY - financialData
+-------------------
+DRD - earnings
+-------------------
+BRAG - assetProfile
+-------------------
+BANX - defaultKeyStatistics
+-------------------
+INTG - financialData
+-------------------
+BSJQ - earnings
+-------------------
+NMM - assetProfile
+-------------------
+DRVN - defaultKeyStatistics
+-------------------
+SAR - financialData
+-------------------
+EVFM - earnings
+-------------------
+ITW - assetProfile
+-------------------
+FUMB - defaultKeyStatistics
+-------------------
+FLCH - financialData
+-------------------
+STRT - earnings
+-------------------
+ANET - assetProfile
+-------------------
+FCO - defaultKeyStatistics
+-------------------
+NDP - financialData
+-------------------
+EIX - earnings
+-------------------
+MTCR - assetProfile
+-------------------
+INS - defaultKeyStatistics
+-------------------
+ADSK - financialData
+-------------------
+ORGN - earnings
+-------------------
+MLHR - assetProfile
+-------------------
+CHKP - defaultKeyStatistics
+-------------------
+UXI - financialData
+-------------------
+JELD - earnings
+-------------------
+SGTX - assetProfile
+-------------------
+SDS - defaultKeyStatistics
+-------------------
+HDRO - financialData
+-------------------
+EMGF - earnings
+-------------------
+RLI - assetProfile
+-------------------
+DOGZ - defaultKeyStatistics
+-------------------
+BEEM - financialData
+-------------------
+CASY - earnings
+-------------------
+BCLI - assetProfile
+-------------------
+HDV - defaultKeyStatistics
+-------------------
+EEM - financialData
+-------------------
+LUNG - earnings
+-------------------
+FORM - assetProfile
+-------------------
+TRT - defaultKeyStatistics
+-------------------
+HNST - financialData
+-------------------
+IBMN - earnings
+-------------------
+EMKR - assetProfile
+-------------------
+IPOF - defaultKeyStatistics
+-------------------
+TATT - financialData
+-------------------
+NUAG - earnings
+-------------------
+SQFTP - assetProfile
+-------------------
+QTEC - defaultKeyStatistics
+-------------------
+FMAY - financialData
+-------------------
+KYMR - earnings
+-------------------
+FMTX - assetProfile
+-------------------
+ONEY - defaultKeyStatistics
+-------------------
+GBCI - financialData
+-------------------
+PCK - earnings
+-------------------
+OPRX - assetProfile
+-------------------
+KOSS - defaultKeyStatistics
+-------------------
+BTI - financialData
+-------------------
+ITOS - earnings
+-------------------
+ACEVU - assetProfile
+-------------------
+ACGLN - defaultKeyStatistics
+-------------------
+EWL - financialData
+-------------------
+AIF - earnings
+-------------------
+JIG - assetProfile
+-------------------
+ETR - defaultKeyStatistics
+-------------------
+TJX - financialData
+-------------------
+JXI - earnings
+-------------------
+EPSN - assetProfile
+-------------------
+TWNK - defaultKeyStatistics
+-------------------
+TETC - financialData
+-------------------
+RSX - earnings
+-------------------
+WATT - assetProfile
+-------------------
+INMB - defaultKeyStatistics
+-------------------
+BNFT - financialData
+-------------------
+CP - earnings
+-------------------
+RNDV - assetProfile
+-------------------
+RMTI - defaultKeyStatistics
+-------------------
+MOV - financialData
+-------------------
+PCN - earnings
+-------------------
+MCN - assetProfile
+-------------------
+JBHT - defaultKeyStatistics
+-------------------
+ALTM - financialData
+-------------------
+EXPE - earnings
+-------------------
+YALA - assetProfile
+-------------------
+XDQQ - defaultKeyStatistics
+-------------------
+PBJ - financialData
+-------------------
+VMW - earnings
+-------------------
+PBJ - assetProfile
+-------------------
+MBOX - defaultKeyStatistics
+-------------------
+JDIV - financialData
+-------------------
+VT - earnings
+-------------------
+JDIV - assetProfile
+-------------------
+JDIV - defaultKeyStatistics
+-------------------
+MUFG - financialData
+-------------------
+SPEM - earnings
+-------------------
+VT - assetProfile
+-------------------
+SPEM - defaultKeyStatistics
+-------------------
+RFL - financialData
+-------------------
+FLCH - earnings
+-------------------
+FLCH - assetProfile
+-------------------
+VT - defaultKeyStatistics
+-------------------
+BSJQ - financialData
+-------------------
+ITW - earnings
+-------------------
+BSJQ - assetProfile
+-------------------
+BSJQ - defaultKeyStatistics
+-------------------
+ITW - financialData
+-------------------
+UXI - earnings
+-------------------
+UXI - assetProfile
+-------------------
+FLCH - defaultKeyStatistics
+-------------------
+EVFM - financialData
+-------------------
+ANET - earnings
+-------------------
+HDRO - assetProfile
+-------------------
+ANET - defaultKeyStatistics
+-------------------
+MLHR - financialData
+-------------------
+MLHR - earnings
+-------------------
+EMGF - assetProfile
+-------------------
+MLHR - defaultKeyStatistics
+-------------------
+EMGF - financialData
+-------------------
+HDRO - earnings
+-------------------
+EEM - assetProfile
+-------------------
+EMGF - defaultKeyStatistics
+-------------------
+SGTX - financialData
+-------------------
+SGTX - earnings
+-------------------
+IBMN - assetProfile
+-------------------
+IBMN - defaultKeyStatistics
+-------------------
+IBMN - financialData
+-------------------
+EEM - earnings
+-------------------
+NUAG - assetProfile
+-------------------
+HDRO - defaultKeyStatistics
+-------------------
+NUAG - financialData
+-------------------
+RLI - earnings
+-------------------
+FMAY - assetProfile
+-------------------
+FMAY - defaultKeyStatistics
+-------------------
+BCLI - financialData
+-------------------
+FMAY - earnings
+-------------------
+EWL - assetProfile
+-------------------
+NUAG - defaultKeyStatistics
+-------------------
+FORM - financialData
+-------------------
+FORM - earnings
+-------------------
+AIF - assetProfile
+-------------------
+UXI - defaultKeyStatistics
+-------------------
+AIF - financialData
+-------------------
+EWL - earnings
+-------------------
+JXI - assetProfile
+-------------------
+EWL - defaultKeyStatistics
+-------------------
+JXI - financialData
+-------------------
+EMKR - earnings
+-------------------
+RSX - assetProfile
+-------------------
+JXI - defaultKeyStatistics
+-------------------
+EMKR - financialData
+-------------------
+FMTX - earnings
+-------------------
+BNFT - assetProfile
+-------------------
+PBJ - defaultKeyStatistics
+-------------------
+FMTX - financialData
+-------------------
+OPRX - earnings
+-------------------
+PODD - assetProfile
+-------------------
+OPRX - defaultKeyStatistics
+-------------------
+JIG - financialData
+-------------------
+JIG - earnings
+-------------------
+MCO - assetProfile
+-------------------
+JIG - defaultKeyStatistics
+-------------------
+WE - financialData
+-------------------
+GNE - earnings
+-------------------
+PFIX - assetProfile
+-------------------
+EEM - defaultKeyStatistics
+-------------------
+ATER - financialData
+-------------------
+XLE - earnings
+-------------------
+SWBI - assetProfile
+-------------------
+EMKR - defaultKeyStatistics
+-------------------
+VVR - financialData
+-------------------
+FWONK - earnings
+-------------------
+XRX - assetProfile
+-------------------
+ARGT - defaultKeyStatistics
+-------------------
+MODN - financialData
+-------------------
+JG - earnings
+-------------------
+JBI - assetProfile
+-------------------
+RCII - defaultKeyStatistics
+-------------------
+AGG - financialData
+-------------------
+EL - earnings
+-------------------
+UGI - assetProfile
+-------------------
+FELE - defaultKeyStatistics
+-------------------
+DGX - financialData
+-------------------
+GRPN - earnings
+-------------------
+PGR - assetProfile
+-------------------
+ALLT - defaultKeyStatistics
+-------------------
+POCT - financialData
+-------------------
+IGNYU - earnings
+-------------------
+UVSP - assetProfile
+-------------------
+PLDR - defaultKeyStatistics
+-------------------
+AINC - financialData
+-------------------
+HOPE - earnings
+-------------------
+HCAT - assetProfile
+-------------------
+QLD - defaultKeyStatistics
+-------------------
+SPPP - financialData
+-------------------
+MGV - earnings
+-------------------
+PBHC - assetProfile
+-------------------
+SECO - defaultKeyStatistics
+-------------------
+AMRK - financialData
+-------------------
+CSGS - earnings
+-------------------
+COF - assetProfile
+-------------------
+SPD - defaultKeyStatistics
+-------------------
+NEGG - financialData
+-------------------
+SOXQ - earnings
+-------------------
+SQZ - assetProfile
+-------------------
+VCEB - defaultKeyStatistics
+-------------------
+DGICA - financialData
+-------------------
+CIR - earnings
+-------------------
+VCIF - assetProfile
+-------------------
+CCXI - defaultKeyStatistics
+-------------------
+WHLM - financialData
+-------------------
+AVB - earnings
+-------------------
+BGCP - assetProfile
+-------------------
+TEF - defaultKeyStatistics
+-------------------
+GEOS - financialData
+-------------------
+HEI - earnings
+-------------------
+IDOG - assetProfile
+-------------------
+SPGI - defaultKeyStatistics
+-------------------
+IBMP - financialData
+-------------------
+ITI - earnings
+-------------------
+CMCM - assetProfile
+-------------------
+ALPN - defaultKeyStatistics
+-------------------
+WKSP - financialData
+-------------------
+MORF - earnings
+-------------------
+CPRX - assetProfile
+-------------------
+DVD - defaultKeyStatistics
+-------------------
+IRBT - financialData
+-------------------
+UEPS - earnings
+-------------------
+ANDE - assetProfile
+-------------------
+ELA - defaultKeyStatistics
+-------------------
+EES - financialData
+-------------------
+SMN - earnings
+-------------------
+PBW - assetProfile
+-------------------
+APEN - defaultKeyStatistics
+-------------------
+PLNT - financialData
+-------------------
+BMA - earnings
+-------------------
+MBOT - assetProfile
+-------------------
+TUFN - defaultKeyStatistics
+-------------------
+RCAT - financialData
+-------------------
+SNCY - earnings
+-------------------
+NOCT - assetProfile
+-------------------
+CGTX - defaultKeyStatistics
+-------------------
+ADERU - financialData
+-------------------
+IYT - earnings
+-------------------
+SLYV - assetProfile
+-------------------
+SMBK - defaultKeyStatistics
+-------------------
+FISI - financialData
+-------------------
+NTIC - earnings
+-------------------
+PSCC - assetProfile
+-------------------
+PDT - defaultKeyStatistics
+-------------------
+FQAL - financialData
+-------------------
+WBIF - earnings
+-------------------
+LUMN - assetProfile
+-------------------
+SPXT - defaultKeyStatistics
+-------------------
+PKOH - financialData
+-------------------
+PZT - earnings
+-------------------
+GHM - assetProfile
+-------------------
+MACK - defaultKeyStatistics
+-------------------
+EMAN - financialData
+-------------------
+HLIO - earnings
+-------------------
+PCYG - assetProfile
+-------------------
+DVOL - defaultKeyStatistics
+-------------------
+DTST - financialData
+-------------------
+ARRY - earnings
+-------------------
+PTOCU - assetProfile
+-------------------
+FINMU - defaultKeyStatistics
+-------------------
+NXTG - financialData
+-------------------
+FDL - earnings
+-------------------
+DSPC - assetProfile
+-------------------
+XYLD - defaultKeyStatistics
+-------------------
+HTGC - financialData
+-------------------
+FLQL - earnings
+-------------------
+SVVC - assetProfile
+-------------------
+HEPA - defaultKeyStatistics
+-------------------
+OIH - financialData
+-------------------
+EGY - earnings
+-------------------
+BECN - assetProfile
+-------------------
+EWV - defaultKeyStatistics
+-------------------
+PSCH - financialData
+-------------------
+CPSS - earnings
+-------------------
+UTSI - assetProfile
+-------------------
+PRGO - defaultKeyStatistics
+-------------------
+PFIX - financialData
+-------------------
+AGG - earnings
+-------------------
+AGG - assetProfile
+-------------------
+XLE - defaultKeyStatistics
+-------------------
+SWBI - financialData
+-------------------
+XRX - earnings
+-------------------
+POCT - assetProfile
+-------------------
+POCT - defaultKeyStatistics
+-------------------
+UGI - financialData
+-------------------
+PGR - earnings
+-------------------
+IGNYU - assetProfile
+-------------------
+MGV - defaultKeyStatistics
+-------------------
+UVSP - financialData
+-------------------
+HCAT - earnings
+-------------------
+SPD - assetProfile
+-------------------
+HCAT - defaultKeyStatistics
+-------------------
+SPD - financialData
+-------------------
+SPD - earnings
+-------------------
+SOXQ - assetProfile
+-------------------
+SOXQ - defaultKeyStatistics
+-------------------
+PBHC - financialData
+-------------------
+PBHC - earnings
+-------------------
+VCEB - assetProfile
+-------------------
+COF - defaultKeyStatistics
+-------------------
+VCEB - financialData
+-------------------
+VCEB - earnings
+-------------------
+IBMP - assetProfile
+-------------------
+IBMP - defaultKeyStatistics
+-------------------
+COF - financialData
+-------------------
+IBMP - earnings

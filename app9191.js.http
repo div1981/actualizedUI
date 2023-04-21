@@ -1,0 +1,333 @@
+const json2html = require('node-json2html');
+const express = require('express');
+const path = require('path');
+const app = express();
+const bodyParser = require("body-parser");
+const pgbequery = require('./db/pgbequery');
+const cookieParser = require('cookie-parser');
+const port = process.env.PORT || 9191;
+
+app.use(bodyParser.urlencoded({extended : true}));
+app.use(express.static(`${__dirname}/public`));
+app.use(cookieParser());
+
+
+app.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
+
+app.get('/test', function(req, res) {
+    console.log((new Date()).toString().substring(0,25) + (new Date()).getMilliseconds()/1000 + __dirname);
+    res.sendFile(path.join(__dirname, 'public/test.html'));
+});
+
+
+app.get('/', function(req, res) {
+    console.log((new Date()).toString().substring(0,25) + (new Date()).getMilliseconds()/1000 + __dirname);
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+});
+
+app.get('/getCompanyPercentileForTicker', function(req, res) {
+    var ticker=null;
+    console.log((new Date()).toString().substring(0,25) + (new Date()).getMilliseconds()/1000 + "received input = ");
+    console.log(req.query);
+    ticker = req.query.ticker;
+    if((req.query.ticker == null) || (req.query.ticker === 'null')){
+        res.status(200).json({"error":"No ticker."});
+        return;
+    }
+    pgbequery.getCompanyPercentileForTicker(ticker, function(doc) {
+        if(doc){
+            res.status(200).json(doc);
+        }else{
+            res.status(200).send("Error in retrieving data");
+        }
+    });
+
+});
+
+app.get('/getCompanyPercentileForInput', function(req, res) {
+    var sector=null, industry=null, revenue_low=null, revenue_high=null, gross_margins=null, revenue_growth=null, roi=null;
+    console.log((new Date()).toString().substring(0,25) + (new Date()).getMilliseconds()/1000 + "received input = ");
+    console.log(req.query);
+    sector=req.query.sector;
+    industry=req.query.industry;
+    revenue_low=req.query.revenue_low;
+    revenue_high=req.query.revenue_high;
+    gross_margins=req.query.gross_margins;
+    revenue_growth=req.query.revenue_growth;
+    roi=req.query.roi;
+    if(undefined == industry)industry=null;
+    if ((sector==null) || (revenue_low==null)|| (revenue_high==null) || (gross_margins==null) || (revenue_growth==null) || (roi==null)){
+        res.status(200).json({"error":"One of the 6 is null"});
+        return;
+    }
+    pgbequery.getCompanyPercentileForInput(sector, industry, revenue_low, revenue_high, gross_margins, revenue_growth, roi, function(doc) {
+        if(doc){
+            res.status(200).json(doc);
+        }else{
+            res.status(200).send("Error in retrieving data");
+        }
+    });
+
+});
+
+
+app.get('/getCompensationPercentileForTicker', function(req, res) {
+    var ticker=null, titl=null, func=null, total_pay=null;
+    console.log((new Date()).toString().substring(0,25) + (new Date()).getMilliseconds()/1000 + "received input = ");
+    console.log(req.query);
+    ticker = req.query.ticker;
+    titl = req.query.titl;
+    func = req.query.func;
+    total_pay = req.query.total_pay;
+
+    if((titl == null) || (func == null)  || (total_pay == null) ){
+        res.status(200).json({"error":"titl, func, total_pay is mandatory"});
+        return;
+    }
+    if((req.query.ticker == null) || (req.query.ticker === 'null')){
+        res.status(200).json({"error":"No ticker."});
+        return;
+    }
+    pgbequery.getCompensationPercentileForTicker(ticker, titl, func, total_pay, function(doc) {
+        if(doc){
+            res.status(200).json(doc);
+        }else{
+            res.status(200).send("Error in retrieving data");
+        }
+    });
+
+});
+
+app.get('/getCompensationPercentileForInput', function(req, res) {
+    var sector=null, industry=null, revenue_low=null, revenue_high=null, titl=null, func=null, total_pay=null;
+    console.log((new Date()).toString().substring(0,25) + (new Date()).getMilliseconds()/1000 + "received input = ");
+    console.log(req.query);
+    titl = req.query.titl;
+    func = req.query.func;
+    total_pay = req.query.total_pay;
+
+    if((titl == null) || (func == null)  || (total_pay == null) ){
+        res.status(200).json({"error":"titl, func, total_pay is mandatory"});
+        return;
+    }
+    sector=req.query.sector;
+    industry=req.query.industry;
+    revenue_low=req.query.revenue_low;
+    revenue_high=req.query.revenue_high;
+    if(undefined == industry)industry=null;
+    if ((sector==null) || (revenue_low==null)|| (revenue_high==null) ){
+        res.status(200).json({"error":"One of the (sector, industry, revenue_low, revenue_high) is null"});
+        return;
+    }
+    pgbequery.getCompensationPercentileForInput(sector, industry, revenue_low, revenue_high, titl, func, total_pay, function(doc) {
+        if(doc){
+            res.status(200).json(doc);
+        }else{
+            res.status(200).send("Error in retrieving data");
+        }
+    });
+});
+
+let company_table_header = {
+    "<>": "tr", "html": [
+        {"<>": "th", "html": "ticker"},
+        {"<>": "th", "html": "total_revenue"},
+        {"<>": "th", "html": "revenue_growth"},
+        {"<>": "th", "html": "gross_margins"},
+        {"<>": "th", "html": "roi"},
+        {"<>": "th", "html": "eps"},
+        {"<>": "th", "html": "company_name"}
+    ]
+}
+
+let company_table_body = {
+    "<>": "tr", "html": [
+        {"<>": "td", "html": "${ticker}"},
+        {"<>": "td", "html": "${total_revenue_c}"},
+        {"<>": "td", "html": "${revenue_growth_c}"},
+        {"<>": "td", "html": "${gross_margins_c}"},
+        {"<>": "td", "html": "${roi_c}"},
+        {"<>": "td", "html": "${eps_c}"},
+        {"<>": "td", "html": "${company_name}"}
+    ]
+}
+
+let compensation_table_header = {
+    "<>": "tr", "html": [
+        {"<>": "th", "html": "title_match?"},
+        {"<>": "th", "html": "func_match?"},
+        {"<>": "th", "html": "G?"},
+        {"<>": "th", "html": "g?"},
+        {"<>": "th", "html": "title"},
+        {"<>": "th", "html": "ticker"},
+        {"<>": "th", "html": "total_revenue"},
+        {"<>": "th", "html": "total_pay"},
+        {"<>": "th", "html": "name"},
+        {"<>": "th", "html": "company_name"}
+    ]
+}
+let compensation_table_body = {
+    "<>": "tr", "html": [
+        {"<>": "td", "html": "${title_match_indicator}"},
+        {"<>": "td", "html": "${func_match_indicator}"},
+        {"<>": "td", "html": "${counter}"},
+        {"<>": "td", "html": "${pos}"},
+        {"<>": "td", "html": "${title}"},
+        {"<>": "td", "html": "${ticker}"},
+        {"<>": "td", "html": "${total_revenue_c}"},
+        {"<>": "td", "html": "${total_pay_c}"},
+        {"<>": "td", "html": "${name}"},
+        {"<>": "td", "html": "${company_name}"}
+    ]
+}
+
+
+function sendHtmlForCompany(res, data){
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write(
+        "<html><body><table border=1>" + json2html.render(data[0],company_table_header) + json2html.render(data,company_table_body) + "</table></body></html>"
+    );
+    res.end();
+}
+function sendHtmlForCompensation(res, data1, data2){
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write(
+        "<html><body>  " + 
+        " <table border=1>" + json2html.render(data1[0],compensation_table_header) + json2html.render(data1,compensation_table_body) + "</table> <p><h1>Table with larger scope</h1><p> " +
+        " <table border=1>" + json2html.render(data2[0],compensation_table_header) + json2html.render(data2,compensation_table_body) + "</table>  " +
+         "</body></html>"
+    );
+    res.end();
+}
+
+app.get('/getCompanyBenchmarkForTicker', function(req, res) {
+    var ticker=null;
+    console.log((new Date()).toString().substring(0,25) + (new Date()).getMilliseconds()/1000 + "received input = ");
+    console.log(req.query);
+    ticker = req.query.ticker;
+    if((req.query.ticker == null) || (req.query.ticker === 'null')){
+        res.status(200).json({"error":"No ticker."});
+        return;
+    }
+    pgbequery.getCompanyBenchmarkForTicker(ticker, function(doc) {
+        if(doc){
+            //res.status(200).json(doc);
+            sendHtmlForCompany(res, doc);
+        }else{
+            res.status(200).send("Error in retrieving data");
+        }
+    });
+
+});
+
+app.get('/getCompanyBenchmarkForInput', function(req, res) {
+    var sector=null, industry=null, revenue_low=null, revenue_high=null, gross_margins=null, revenue_growth=null, roi=null;
+    console.log((new Date()).toString().substring(0,25) + (new Date()).getMilliseconds()/1000 + "received input = ");
+    console.log(req.query);
+    sector=req.query.sector;
+    industry=req.query.industry;
+    revenue_low=req.query.revenue_low;
+    revenue_high=req.query.revenue_high;
+    gross_margins=req.query.gross_margins;
+    revenue_growth=req.query.revenue_growth;
+    roi=req.query.roi;
+    if(undefined == industry)industry=null;
+    if ((sector==null) || (revenue_low==null)|| (revenue_high==null) || (gross_margins==null) || (revenue_growth==null) || (roi==null)){
+        res.status(200).json({"error":"One of the 6 is null 111"});
+        return;
+    }
+    pgbequery.getCompanyBenchmarkForInput(sector, industry, revenue_low, revenue_high, gross_margins, revenue_growth, roi, function(doc) {
+        if(doc){
+            // res.status(200).json(doc);
+            sendHtmlForCompany(res, doc);
+        }else{
+            res.status(200).send("Error in retrieving data");
+        }
+    });
+
+});
+
+
+app.get('/getCompensationBenchmarkForTicker', function(req, res) {
+    var ticker=null, titl=null, func=null, total_pay=null;
+    console.log((new Date()).toString().substring(0,25) + (new Date()).getMilliseconds()/1000 + "received input = ");
+    console.log(req.query);
+    ticker = req.query.ticker;
+    titl = req.query.titl;
+    func = req.query.func;
+    total_pay = req.query.total_pay;
+
+    if((titl == null) || (func == null)  || (total_pay == null) ){
+        res.status(200).json({"error":"titl, func, total_pay is mandatory"});
+        return;
+    }
+    if((req.query.ticker == null) || (req.query.ticker === 'null')){
+        res.status(200).json({"error":"No ticker."});
+        return;
+    }
+    pgbequery.getCompensationBenchmarkFilteredForTicker(ticker, titl, func, total_pay, function(doc1) {
+        if(doc1){
+            pgbequery.getCompensationBenchmarkForTicker(ticker, titl, func, total_pay, function(doc2) {
+                if(doc2){
+                    // res.status(200).json(doc);
+                    sendHtmlForCompensation(res, doc1, doc2);
+                }else{
+                    res.status(200).send("Error in retrieving data");
+                }
+            });
+            // res.status(200).json(doc);
+            //sendHtmlForCompensation(res, doc);
+        }else{
+            res.status(200).send("Error in retrieving data");
+        }
+    });
+
+});
+
+app.get('/getCompensationBenchmarkForInput', function(req, res) {
+    var sector=null, industry=null, revenue_low=null, revenue_high=null, titl=null, func=null, total_pay=null;
+    console.log((new Date()).toString().substring(0,25) + (new Date()).getMilliseconds()/1000 + "received input = ");
+    console.log(req.query);
+    titl = req.query.titl;
+    func = req.query.func;
+    total_pay = req.query.total_pay;
+
+    if((titl == null) || (func == null)  || (total_pay == null) ){
+        res.status(200).json({"error":"titl, func, total_pay is mandatory"});
+        return;
+    }
+    sector=req.query.sector;
+    industry=req.query.industry;
+    revenue_low=req.query.revenue_low;
+    revenue_high=req.query.revenue_high;
+    if(undefined == industry)industry=null;
+    if ( (sector==null) || (revenue_low==null)|| (revenue_high==null) ){
+        res.status(200).json({"error":"One of the (sector, industry, revenue_low, revenue_high) is null"});
+        return;
+    }
+    pgbequery.getCompensationBenchmarkFilteredForInput(sector, industry, revenue_low, revenue_high, titl, func, total_pay, function(doc1) {
+        if(doc1){
+            pgbequery.getCompensationBenchmarkForInput(sector, industry, revenue_low, revenue_high, titl, func, total_pay, function(doc2) {
+                if(doc2){
+                    // res.status(200).json(doc);
+                    sendHtmlForCompensation(res, doc1, doc2);
+                }else{
+                    res.status(200).send("Error in retrieving data");
+                }
+            });
+            // res.status(200).json(doc);
+            //sendHtmlForCompensation(res, doc);
+        }else{
+            res.status(200).send("Error in retrieving data");
+        }
+    });
+});
+
+
+app.listen(port);
+console.log((new Date()).toString().substring(0,25) + (new Date()).getMilliseconds()/1000 + 'Server started at http://localhost:' + port);

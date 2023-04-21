@@ -1,0 +1,429 @@
+<html>
+  <head>
+      <script src="  https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+
+      <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+      
+<!-- 
+https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js
+https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js -->
+
+
+      <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+      <link href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css" rel="stylesheet">  
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      
+  
+<style>
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.divDial {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #0062cc;
+}
+
+.dialCard {
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
+}
+
+.divButton {
+    text-align: center;
+    height:50px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    border-radius: 5px;
+    z-index: 9;
+    background-color: #F4F4F4;
+    box-shadow: none;
+    text-shadow: none;
+    color: #000;
+    border-width: 1px;
+    border-color: #0062cc;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.divborder{
+  text-align: center;
+}
+
+select, textarea{
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.width60{
+  width:60%;
+}
+
+.width50{
+  width:50%;
+}
+
+.width45{
+    float:left;
+    width:45%;
+}
+
+
+
+@media (max-width: 540px) {
+  .width60{
+     width:90%;
+  }
+
+  .width50{
+    width:90%;
+  }
+
+  .width45{
+    float:none;
+    width:auto;
+  }
+
+  .width100{
+      width:100%;
+  }
+
+}
+
+@media (min-width: 540px) {
+  .width100{
+    display: flex;
+    justify-content: center;
+    width:100%;
+  }
+
+}
+
+
+
+</style>
+<script>
+         var data;
+         $(document).ready(function() {
+            //showSlides(slideIndex);
+            var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+            let date = new Date();
+            let current_date = "As of " + monthNames[date.getMonth()] + " " + date.getDate()  + " " + date.getFullYear();
+            $("#date").html(current_date); 
+	          console.log(current_date);
+            $.ajax({
+                url: "/getJob", 
+                success: function(result){
+                    console.log(result);
+                    let html ="";
+                    data = result;
+                    let sector = [];
+                    let industry = [];
+                    $.each(result, function(index, item) {
+                        let id = item.id;
+                        let display = item.company_name + " - " + item.jobname;
+                        sector.push(item.sector)
+                        industry.push(item.industry);
+                        html += '<span style="margin-left:5px;"><a style="text-decoration: none;" href="/display.html?t=' + item.ticker + '&f=' + item.function + '&ti=' + item.title + '">' + display +
+                           '</a></span><br/>';
+                    });
+                    console.log(html);
+                    $("#marqueeData").html(html); 
+                    sector = sector.filter(function(element,index,self){
+                        return index === self.indexOf(element); 
+                    });
+                    industry = industry.filter(function(element,index,self){
+                        return index === self.indexOf(element); 
+                    });
+                    $.each(sector, function(index, item) {
+                        $('#sector').append(new Option(item, item));
+                    });
+                    $.each(industry, function(index, item) {
+                        $('#industry').append(new Option(item, item));
+                    });
+                }
+            });    
+         } );
+        let slideIndex = 1;
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            //dots[slideIndex-1].className += " active";
+            }
+
+            function loadData(){
+               let sector = $("#sector").val();
+               let industry = $("#industry").val();
+               let searchData = data;
+               
+               if(sector != '0'){
+                    searchData = searchData.filter(function (i,n){
+                      return i.sector===sector;
+                  });
+               }
+               if(industry != '0'){
+                    searchData = searchData.filter(function (i,n){
+                      return i.industry===industry;
+                  });
+               }
+               if(sector == '0' && industry == '0'){
+                    searchData = [];
+               }
+               console.log(searchData);
+               let html = "";
+                $.each(searchData, function(index, item) {
+                    let id = item.id;
+                    let display = item.company_name + " - " + item.jobname;
+                    html += '<span style="margin-left:5px;"><a style="text-decoration: none;" href="/display.html?t=' + item.ticker + '&f=' + item.function + '&ti=' + item.title + '">' + display +
+                           '</a></span><br/>';
+                });
+                $("#filteredData").html(html);
+            
+            }
+  </script>
+  </head>
+   <body>
+    <div style="overflow: hidden;width:100%;height:50px;background-color: azure;"><a href="https://www.actualized.io/" target="_self">
+        <img src="https://d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_104w016000000000000028.png" alt="" loading="lazy" data-src-desktop-1x="https://d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_104w016000000000000028.png" data-src-desktop-2x="//d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_1000000000000000000028.png" data-src-mobile-1x="//d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_103600r000000000000028.png" data-src-mobile-2x="//d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_106c01i000000000000028.png" data-src-mobile-3x="//d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_109i029000000000000028.png" srcset="https://d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_104w016000000000000028.png 1x, //d9hhrg4mnvzow.cloudfront.net/www.actualized.io/71a7dc5b-group-8_1000000000000000000028.png 2x"> <img style="width:80px;height:25px;margin-top:5px;" src="images/Beta.jpg" loading="lazy" data-src-desktop-1x="images/Beta.jpg" data-src-desktop-2x="images/Beta.jpg" data-src-mobile-1x="images/Beta.jpg" data-src-mobile-2x="images/Beta.jpg" data-src-mobile-3x="images/Beta.jpg" srcset="images/Beta.jpg 1x, images/Beta.jpg 2x"></a> 
+    </div>
+    
+   <!-- <div>
+        <div style="overflow: hidden;width:60%;float:left;text-align: center;">
+        <h1>Possible Job Openings!</h1>
+        <span>Actualized scans company listings to find possible job opening for your convenience</span><br/></br>
+        <span>There listing change Often and will roll off in 30 - 180 days since the announcement </span><br/>
+        </div>
+        <div style="overflow: hidden;width:30%;text-align: center;">
+            <h3>Feedback/Contact</h3>
+            <span>write to us at contact@actualized.io or leave your email if want us to reach out securely here </span><br/></br>
+            <label>email address </label>  <input type="text" id="email" name="email" placeholder=""> 
+
+        </div>
+    </div>  -->
+    <div style="display: flex;justify-content: center;">
+    <div class="divDial dialCard width60" style="text-align: center;"><br/>
+      <div class="divButton"><b>Possible C- level openings!</b> </div><br/>
+      <div class="divborder">
+         <span>Actualized scans executive mobility within companies to identify C-level jobs that may be open.<br/>
+          This list is updated regularly and refreshed every 45 days.*</span>
+      </div>
+      <div style="margin-top: 15px;" id="panel2"></div>
+    </div>  
+  </div>
+    <br/>
+    
+
+   <!-- <div style="width:100%;">
+        <div style="overflow: hidden;width:60%;float:left;height:250px;margin-left:5%;">
+            <h3 id="date">As of Dec 15 2023</h3>  (Please click the corresponding job link to compare with your current position) <br/><br/>
+            <div style="overflow: hidden;width:60%;border:1px solid black;">
+               <div style="text-align: center;margin-top:5px;"><span style="font-size: 20px;"><b>Jobs - Vacancies</b> </span></div>
+               <hr>
+              <marquee id="marqueeData" direction="up" height="100px" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
+                <span style="margin-left:5px;"><a style="text-decoration: none;" href="/display.html">Coming soon</a></span><br/>
+                <span style="margin-left:5px;"><a style="text-decoration: none;" href="/display.html">Coming soon</a></span><br/>
+                <span style="margin-left:5px;"><a style="text-decoration: none;" href="/display.html">Coming soon</a></span><br/>
+                <span style="margin-left:5px;"><a style="text-decoration: none;" href="/display.html">Coming soon</a></span><br/>
+              </marquee>
+            </div>
+        </div>
+        <div style="overflow: hidden;height:250px;width:30%;text-align: center;">
+            <h3>Feedback/Contact</h3>
+            <span>write to us at contact@actualized.io or leave your email if want us to reach out securely here </span><br/></br>
+            <label>email address </label>  <input type="text" id="email" name="email" placeholder="">  
+
+        </div>
+    </div>  -->
+    
+    <div class="width100">
+      <div class="divDial dialCard width45" style="text-align: center;"><br/>
+        <div class="divButton"><b><span id="date">Feedback/Contact</span></b> </div><br/>
+        <div class="divborder" style="margin-left:10%">
+          <marquee id="marqueeData" direction="up" height="100px" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
+            <span style="margin-left:5px;"><a style="text-decoration: none;" href="/display.html">Coming soon</a></span><br/>
+            <span style="margin-left:5px;"><a style="text-decoration: none;" href="/display.html">Coming soon</a></span><br/>
+            <span style="margin-left:5px;"><a style="text-decoration: none;" href="/display.html">Coming soon</a></span><br/>
+            <span style="margin-left:5px;"><a style="text-decoration: none;" href="/display.html">Coming soon</a></span><br/>
+          </marquee>
+        </div>
+        <div style="margin-top: 15px;" id="panel2"></div>
+      </div>  
+      <div class="divDial dialCard width45" style="margin-left:5%;"><br/>
+        <div style="text-align: center;">
+          <select id="sector" name="sector" style="width:300px;" onchange="loadData()"><option value="0">--Search by Sector ---</option></select>&nbsp;&nbsp;&nbsp;&nbsp;
+          <select id="industry" name="industry" style="width:300px;" onchange="loadData()"><option value="0">--Search by Industry ---</option></select>
+        </div><br/>
+        <div  style="margin-left:10%;overflow-y: auto;" id="filteredData">
+          
+        </div>
+    
+      </div>  
+    </div>
+    <br/>
+    <div style="display: flex;justify-content: center;">
+      <div class="divDial dialCard width50" style="text-align: center;"><br/>
+        <div class="divButton"><b>Feedback/Contact</b> </div><br/>
+        <div class="divborder">
+           <span>Write to us at contact@actualized.io or leave your email for us to reach you
+            securely.</span><br/><br/><br/>
+            <input type="text" id="email" name="email" placeholder=""> 
+        </div>
+        <div style="margin-top: 15px;" id="panel2"></div>
+      </div>  
+    </div>
+    <br/>
+    <div style="text-align: center;">      
+      *For information only. Actualized is not in touch with the companies or cannot guarantee the real-time availability of jobs.
+    </div>
+   <!-- <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div style="border:1px solid black;width:100%;height:100px;">
+            Jobs - Vacancies 
+          </div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="img2.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="img3.jpg" style="width:100%">
+        </div>
+      
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+-->
+  </body>
+
+
+</html>

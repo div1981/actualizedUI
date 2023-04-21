@@ -1,0 +1,12 @@
+Server started at http://localhost:8181
+received input = 
+{ ticker: 'null' }
+received input = 
+{ ticker: 'null',
+  titl: '2.5',
+  func: '0.0',
+  total_pay: '-1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '171235431' }
+{ salary: '11', max_score: '34', percentile: 30.88235294117647 }

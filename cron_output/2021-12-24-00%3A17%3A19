@@ -1,0 +1,4 @@
+Server started at http://localhost:9191
+received input = 
+{ ticker: 'T' }
+roi=null

@@ -1,0 +1,105 @@
+Server started at http://localhost:8181
+received input = 
+{ ticker: 'null',
+  roi: '-2.5',
+  revenue_growth: '15',
+  gross_margins: '1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+roi=-0.025
+{ roi_eps: '1',
+  gross_margins: '0',
+  revenue_growth: '16',
+  max_score: '20',
+  percentile: 25.833333333333332 }
+received input = 
+{ ticker: 'null',
+  roi: '-2.5',
+  revenue_growth: '15',
+  gross_margins: '1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+roi=-0.025
+{ roi_eps: '1',
+  gross_margins: '0',
+  revenue_growth: '16',
+  max_score: '20',
+  percentile: 25.833333333333332 }
+received input = 
+{ ticker: 'null',
+  roi: '-2.5',
+  revenue_growth: '15',
+  gross_margins: '1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+received input = 
+{ ticker: 'T',
+  roi: '-2.5',
+  revenue_growth: '15',
+  gross_margins: '1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+roi=null
+{ roi_eps: '1',
+  gross_margins: '2',
+  revenue_growth: '1',
+  max_score: '4',
+  percentile: 20.833333333333332 }
+received input = 
+{ ticker: 'GROW',
+  titl: '2.5',
+  func: '0.0',
+  total_pay: '-1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+{ salary: '5', max_score: '9', percentile: 50 }
+received input = 
+{ ticker: 'GROW',
+  titl: '2.5',
+  func: '0.0',
+  total_pay: '112345',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+{ salary: '5', max_score: '9', percentile: 50 }
+received input = 
+{ ticker: 'GROW',
+  titl: '2.5',
+  func: '0.0',
+  total_pay: '1123450',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+{ salary: '9', max_score: '9', percentile: 94.44444444444444 }
+received input = 
+{ ticker: 'GROW',
+  titl: '2.5',
+  func: '0.0',
+  total_pay: '-1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+{ salary: '5', max_score: '9', percentile: 50 }
+received input = 
+{ ticker: 'GROW',
+  titl: '2.5',
+  func: '0.0',
+  total_pay: '1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+{ salary: '5', max_score: '9', percentile: 50 }
+received input = 
+{ ticker: 'GROW',
+  titl: '2.5',
+  func: '0.0',
+  total_pay: '-1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+{ salary: '5', max_score: '9', percentile: 50 }

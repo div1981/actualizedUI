@@ -1,0 +1,711 @@
+Server started at http://localhost:9191
+/home/actualized/actualizedUI
+/home/actualized/actualizedUI
+/home/actualized/actualizedUI
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+queryData for getCompanyBenchmark:: ticker=GROW,roi=null,sector=null,industry=null,revenue_low=null,revenue_high=null,gross_margins=null,revenue_growth=null
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+queryData for getCompanyBenchmark:: ticker=GROW,roi=null,sector=null,industry=null,revenue_low=null,revenue_high=null,gross_margins=null,revenue_growth=null
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+queryData for getCompanyBenchmark:: ticker=GROW,roi=null,sector=null,industry=null,revenue_low=null,revenue_high=null,gross_margins=null,revenue_growth=null
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+queryData for getCompanyBenchmark:: ticker=GROW,roi=null,sector=null,industry=null,revenue_low=null,revenue_high=null,gross_margins=null,revenue_growth=null
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+queryData for getCompanyBenchmark:: ticker=GROW,roi=null,sector=null,industry=null,revenue_low=null,revenue_high=null,gross_margins=null,revenue_growth=null
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+queryData for getCompanyBenchmark:: ticker=null,roi=12.5,sector=Financial,industry=Insurance - Diversified,revenue_low=1000,revenue_high=9900000000,gross_margins=3.5,revenue_growth=15
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+queryData for getCompanyBenchmark:: ticker=null,roi=12.5,sector=Financial,industry=Insurance - Diversified,revenue_low=1000,revenue_high=9900000000,gross_margins=3.5,revenue_growth=15
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+queryData for getCompanyBenchmark:: ticker=null,roi=12.5,sector=Financial,industry=Insurance - Diversified,revenue_low=1000,revenue_high=9900000000,gross_margins=3.5,revenue_growth=15
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+queryData for getCompanyBenchmark:: ticker=null,roi=12.5,sector=Financial,industry=Insurance - Diversified,revenue_low=1000,revenue_high=9900000000,gross_margins=3.5,revenue_growth=15
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+select runtime from job_functions_v2 returned =101
+queryData for getCompensationBenchmark:: ticker=GROW,sector=null,industry=null,revenue_low=null,revenue_high=null,titl=1010,func=101,total_pay=2343545
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+select runtime from job_functions_v2 returned =101
+queryData for getCompensationBenchmark:: ticker=GROW,sector=null,industry=null,revenue_low=null,revenue_high=null,titl=1010,func=101,total_pay=2343545
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+select runtime from job_functions_v2 returned =101
+queryData for getCompensationBenchmark:: ticker=GROW,sector=null,industry=null,revenue_low=null,revenue_high=null,titl=1010,func=101,total_pay=2343545
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+select runtime from job_functions_v2 returned =101
+queryData for getCompensationBenchmark:: ticker=GROW,sector=null,industry=null,revenue_low=null,revenue_high=null,titl=1010,func=101,total_pay=2343545
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+select runtime from job_functions_v2 returned =101
+queryData for getCompensationBenchmark:: ticker=null,sector=Financial,industry=Insurance - Diversified,revenue_low=1000,revenue_high=9900000000,titl=1010,func=101,total_pay=2343545
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+select runtime from job_functions_v2 returned =101
+queryData for getCompensationBenchmark:: ticker=null,sector=Financial,industry=Insurance - Diversified,revenue_low=1000,revenue_high=9900000000,titl=1010,func=101,total_pay=2343545
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+select runtime from job_functions_v2 returned =101
+queryData for getCompensationBenchmark:: ticker=null,sector=Financial,industry=Insurance - Diversified,revenue_low=1000,revenue_high=9900000000,titl=1010,func=101,total_pay=2343545
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+queryData for getCompanyPercentile:: ticker=GROW,roi=null,sector=null,industry=null,revenue_low=null,revenue_high=null,gross_margins=null,revenue_growth=null
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+queryData for getCompanyBenchmark:: ticker=null,roi=12.5,sector=Financial,industry=null,revenue_low=1000,revenue_high=9900000000,gross_margins=3.5,revenue_growth=15
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+queryData for getCompanyBenchmark:: ticker=null,roi=12.5,sector=Financial,industry=null,revenue_low=1000,revenue_high=9900000000,gross_margins=3.5,revenue_growth=15
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+select runtime from job_functions_v2 returned =101
+queryData for getCompensationBenchmark:: ticker=null,sector=Financial,industry=null,revenue_low=1000,revenue_high=9900000000,titl=1010,func=101,total_pay=2343545
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+select runtime from job_functions_v2 returned =101
+queryData for getCompensationBenchmark:: ticker=null,sector=Financial,industry=null,revenue_low=1000,revenue_high=9900000000,titl=1010,func=101,total_pay=2343545
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1030',
+  func: '70702',
+  total_pay: '2343545' }
+select runtime from job_functions_v2 returned =707,1212
+queryData for getCompensationBenchmark:: ticker=null,sector=Financial,industry=null,revenue_low=1000,revenue_high=9900000000,titl=1030,func=707,1212,total_pay=2343545
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+select runtime from job_functions_v2 returned =101
+queryData for getCompensationPercentile:: ticker=null,sector=Financial,industry=null,revenue_low=1000,revenue_high=9900000000,titl=1010,func=101,total_pay=2343545
+received input = 
+{ ticker: 'GROW',
+  sector: 'Financial',
+  revenue_low: '1000',
+  revenue_high: '9900000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5',
+  titl: '1010',
+  func: '10101',
+  total_pay: '2343545' }
+select runtime from job_functions_v2 returned =101
+queryData for getCompensationPercentile:: ticker=null,sector=Financial,industry=null,revenue_low=1000,revenue_high=9900000000,titl=1010,func=101,total_pay=2343545
+received input = 
+{ ticker: 'GROW' }
+queryData for getCompanyBenchmark:: ticker=GROW,roi=null,sector=null,industry=null,revenue_low=null,revenue_high=null,gross_margins=null,revenue_growth=null
+received input = 
+{ ticker: 'GROW',
+  titl: 'CEO',
+  func: 'Accounting',
+  total_pay: '350000' }
+{ error: invalid input syntax for type integer: "Accounting"
+    at Parser.parseErrorMessage (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.stream.on (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  length: 111,
+  name: 'error',
+  severity: 'ERROR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numutils.c',
+  line: '256',
+  routine: 'pg_strtoint32' }
+queryData for getCompensationBenchmark:: ticker=GROW,sector=null,industry=null,revenue_low=null,revenue_high=null,titl=CEO,func=null,total_pay=350000
+{ error: invalid input syntax for type numeric: "CEO"
+    at Parser.parseErrorMessage (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.stream.on (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  length: 107,
+  name: 'error',
+  severity: 'ERROR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numeric.c',
+  line: '5800',
+  routine: 'set_var_from_str' }
+received input = 
+{ ticker: 'T' }
+queryData for getCompanyPercentile:: ticker=T,roi=null,sector=null,industry=null,revenue_low=null,revenue_high=null,gross_margins=null,revenue_growth=null
+received input = 
+{ ticker: 'T',
+  titl: 'CEO',
+  func: 'Accounting',
+  total_pay: '350000' }
+{ error: invalid input syntax for type integer: "Accounting"
+    at Parser.parseErrorMessage (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.stream.on (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  length: 111,
+  name: 'error',
+  severity: 'ERROR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numutils.c',
+  line: '256',
+  routine: 'pg_strtoint32' }
+queryData for getCompensationPercentile:: ticker=T,sector=null,industry=null,revenue_low=null,revenue_high=null,titl=CEO,func=null,total_pay=350000
+{ error: invalid input syntax for type numeric: "CEO"
+    at Parser.parseErrorMessage (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.stream.on (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  length: 107,
+  name: 'error',
+  severity: 'ERROR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numeric.c',
+  line: '5800',
+  routine: 'set_var_from_str' }
+received input = 
+{ ticker: 'T' }
+queryData for getCompanyBenchmark:: ticker=T,roi=null,sector=null,industry=null,revenue_low=null,revenue_high=null,gross_margins=null,revenue_growth=null
+received input = 
+{ ticker: 'T',
+  titl: 'CEO',
+  func: 'Accounting',
+  total_pay: '350000' }
+{ error: invalid input syntax for type integer: "Accounting"
+    at Parser.parseErrorMessage (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.stream.on (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  length: 111,
+  name: 'error',
+  severity: 'ERROR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numutils.c',
+  line: '256',
+  routine: 'pg_strtoint32' }
+queryData for getCompensationBenchmark:: ticker=T,sector=null,industry=null,revenue_low=null,revenue_high=null,titl=CEO,func=null,total_pay=350000
+{ error: invalid input syntax for type numeric: "CEO"
+    at Parser.parseErrorMessage (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.stream.on (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  length: 107,
+  name: 'error',
+  severity: 'ERROR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numeric.c',
+  line: '5800',
+  routine: 'set_var_from_str' }
+received input = 
+{ ticker: 'T' }
+queryData for getCompanyBenchmark:: ticker=T,roi=null,sector=null,industry=null,revenue_low=null,revenue_high=null,gross_margins=null,revenue_growth=null
+received input = 
+{ ticker: 'T',
+  titl: 'CEO',
+  func: 'Chief Executive Officer',
+  total_pay: '350000' }
+{ error: invalid input syntax for type integer: "Chief Executive Officer"
+    at Parser.parseErrorMessage (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.stream.on (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  length: 124,
+  name: 'error',
+  severity: 'ERROR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numutils.c',
+  line: '256',
+  routine: 'pg_strtoint32' }
+queryData for getCompensationBenchmark:: ticker=T,sector=null,industry=null,revenue_low=null,revenue_high=null,titl=CEO,func=null,total_pay=350000
+{ error: invalid input syntax for type numeric: "CEO"
+    at Parser.parseErrorMessage (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.stream.on (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  length: 107,
+  name: 'error',
+  severity: 'ERROR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numeric.c',
+  line: '5800',
+  routine: 'set_var_from_str' }
+received input = 
+{ ticker: 'T' }
+queryData for getCompanyBenchmark:: ticker=T,roi=null,sector=null,industry=null,revenue_low=null,revenue_high=null,gross_margins=null,revenue_growth=null
+received input = 
+{ ticker: 'T',
+  titl: 'CEO',
+  func: 'Chief Executive Officer',
+  total_pay: '350000' }
+{ error: invalid input syntax for type integer: "Chief Executive Officer"
+    at Parser.parseErrorMessage (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.stream.on (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  length: 124,
+  name: 'error',
+  severity: 'ERROR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numutils.c',
+  line: '256',
+  routine: 'pg_strtoint32' }
+queryData for getCompensationBenchmark:: ticker=T,sector=null,industry=null,revenue_low=null,revenue_high=null,titl=CEO,func=null,total_pay=350000
+{ error: invalid input syntax for type numeric: "CEO"
+    at Parser.parseErrorMessage (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.stream.on (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  length: 107,
+  name: 'error',
+  severity: 'ERROR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numeric.c',
+  line: '5800',
+  routine: 'set_var_from_str' }
+received input = 
+{ ticker: 'T' }
+queryData for getCompanyBenchmark:: ticker=T,roi=null,sector=null,industry=null,revenue_low=null,revenue_high=null,gross_margins=null,revenue_growth=null
+received input = 
+{ ticker: 'T',
+  titl: 'CEO',
+  func: 'Chief Executive Officer',
+  total_pay: '350000' }
+{ error: invalid input syntax for type integer: "Chief Executive Officer"
+    at Parser.parseErrorMessage (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.stream.on (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  length: 124,
+  name: 'error',
+  severity: 'ERROR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numutils.c',
+  line: '256',
+  routine: 'pg_strtoint32' }
+queryData for getCompensationBenchmark:: ticker=T,sector=null,industry=null,revenue_low=null,revenue_high=null,titl=CEO,func=null,total_pay=350000
+{ error: invalid input syntax for type numeric: "CEO"
+    at Parser.parseErrorMessage (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.stream.on (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  length: 107,
+  name: 'error',
+  severity: 'ERROR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numeric.c',
+  line: '5800',
+  routine: 'set_var_from_str' }

@@ -1,0 +1,29 @@
+Server started at http://localhost:9191
+received input = 
+{ ticker: 'null',
+  roi: '-2.5',
+  revenue_growth: '15',
+  gross_margins: '1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+roi=-0.025
+{ roi_eps: '1',
+  gross_margins: '0',
+  revenue_growth: '16',
+  max_score: '20',
+  percentile: 25.833333333333332 }
+received input = 
+{ ticker: 'null',
+  roi: '-2.5',
+  revenue_growth: '15',
+  gross_margins: '1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+roi=-0.025
+{ roi_eps: '1',
+  gross_margins: '0',
+  revenue_growth: '16',
+  max_score: '20',
+  percentile: 25.833333333333332 }

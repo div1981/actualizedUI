@@ -1,0 +1,78 @@
+Server started at http://localhost:9191
+received input = 
+{ ticker: 'GROW',
+  titl: '2.5',
+  func: '0.0',
+  total_pay: '-1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+[ { title: 'CFO, Treasurer & Director',
+    total_pay: '0',
+    ticker: 'OCCI',
+    company_name: 'OFS Credit Company, Inc.',
+    total_revenue: 12619304 },
+  { title: 'Chairman, Pres & CEO',
+    total_pay: '0',
+    ticker: 'OCCI',
+    company_name: 'OFS Credit Company, Inc.',
+    total_revenue: 12619304 },
+  { title: 'CEO, Chief Investment Officer & Director',
+    total_pay: '551000',
+    ticker: 'GROW',
+    company_name: 'U.S. Global Investors, Inc.',
+    total_revenue: 16192000 },
+  { title: 'Chief Financial Officer',
+    total_pay: '187000',
+    ticker: 'GROW',
+    company_name: 'U.S. Global Investors, Inc.',
+    total_revenue: 16192000 },
+  { title: 'CEO & Chairman',
+    total_pay: '0',
+    ticker: 'BANX',
+    company_name: 'StoneCastle Financial Corp.',
+    total_revenue: 17330520 } ]
+received input = 
+{ sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  total_revenue: '800000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5' }
+roi=0.125
+{ error: division by zero
+    at Parser.parseErrorMessage (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.stream.on (/home/actualized/actualizedUI/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  length: 83,
+  name: 'error',
+  severity: 'ERROR',
+  code: '22012',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'float.c',
+  line: '115',
+  routine: 'float_zero_divide_error' }
+received input = 
+{ sector: 'Financial',
+  industry: 'Insurance - Diversified',
+  total_revenue: '800000000',
+  gross_margins: '3.5',
+  revenue_growth: '15',
+  roi: '12.5' }
+[]

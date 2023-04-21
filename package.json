@@ -1,0 +1,22 @@
+{
+  "name": "actualizedUI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "dns": "^0.2.2",
+    "express": "^4.17.1",
+    "express-useragent": "^1.0.15",
+    "lodash": "^4.17.21",
+    "node-json2html": "^2.2.0",
+    "nodemailer": "^6.7.8",
+    "pg": "^8.7.1"
+  }
+}

@@ -1,0 +1,125 @@
+Server started at http://localhost:8080
+undefined
+undefined
+undefined
+undefined
+[ { sector: 'Financial' },
+  { sector: 'Real Estate' },
+  { sector: 'Healthcare' },
+  { sector: 'Basic Materials' },
+  { sector: 'Energy' },
+  { sector: 'Consumer Cyclical' },
+  { sector: 'Industrials' },
+  { sector: 'Utilities' },
+  { sector: 'Technology' },
+  { sector: 'Consumer Defensive' },
+  { sector: 'Communication Services' } ]
+[ { industry: 'Insurance - Diversified' },
+  { industry: 'Closed-End Fund - Equity' },
+  { industry: 'Capital Markets' },
+  { industry: 'Financial Conglomerates' },
+  { industry: 'Closed-End Fund - Foreign' },
+  { industry: 'Exchange Traded Fund' },
+  { industry: 'Asset Management' },
+  { industry: 'Insurance - Reinsurance' },
+  { industry: 'Financial Data & Stock Exchanges' },
+  { industry: 'Insurance - Property & Casualty' },
+  { industry: 'Credit Services' },
+  { industry: 'Closed-End Fund - Debt' },
+  { industry: 'Banks - Regional' },
+  { industry: 'Banks - Diversified' },
+  { industry: 'Insurance Brokers' },
+  { industry: 'Mortgage Finance' },
+  { industry: 'Insurance - Life' },
+  { industry: 'Shell Companies' },
+  { industry: 'Insurance - Specialty' } ]
+Financial
+Insurance - Diversified
+[ { name: 'marketcap', min: 26.39, max: 699086.7 },
+  { name: 'pm', min: -22.5, max: 79.8 },
+  { name: 'gm', min: 0, max: 59.1 },
+  { name: 'roi', min: -10.7, max: 33 },
+  { name: 'eps', min: -43.9, max: 46.8 },
+  { name: 'sales', min: -5.8, max: 39.5 } ]
+ticker  AAPL
+{ ticker: 'AAPL',
+  company_name: 'Apple Inc.',
+  sector: 'Technology',
+  industry: 'Consumer Electronics',
+  country: 'USA',
+  market_cap: 2541537,
+  pe: 29.57,
+  eps_past5yrs: 22,
+  sales_past5yrs: 11.1,
+  roi: 50,
+  gross_margin: 41,
+  profit_margin: 27.3 }
+[ { industry: 'Electronic Components' },
+  { industry: 'Software - Infrastructure' },
+  { industry: 'Scientific & Technical Instruments' },
+  { industry: 'Software - Application' },
+  { industry: 'Electronics & Computer Distribution' },
+  { industry: 'Computer Hardware' },
+  { industry: 'Solar' },
+  { industry: 'Consumer Electronics' },
+  { industry: 'Communication Equipment' },
+  { industry: 'Information Technology Services' },
+  { industry: 'Semiconductor Equipment & Materials' },
+  { industry: 'Semiconductors' } ]
+Technology
+Electronic Components
+[ { name: 'marketcap', min: 26.12, max: 50543.47 },
+  { name: 'pm', min: -85.3, max: 15.1 },
+  { name: 'gm', min: 0, max: 96.8 },
+  { name: 'roi', min: -44.8, max: 78.1 },
+  { name: 'eps', min: -43.7, max: 38.7 },
+  { name: 'sales', min: -34.7, max: 17.4 } ]
+Technology
+Consumer Electronics
+[ { name: 'marketcap', min: 25.01, max: 2541537 },
+  { name: 'pm', min: -75.7, max: 27.3 },
+  { name: 'gm', min: 7.4, max: 48.8 },
+  { name: 'roi', min: -36.9, max: 69.5 },
+  { name: 'eps', min: -39.6, max: 51.5 },
+  { name: 'sales', min: -30.5, max: 33.3 } ]
+Technology
+Consumer Electronics
+[ { name: 'marketcap', min: 25.01, max: 2541537 },
+  { name: 'pm', min: -75.7, max: 27.3 },
+  { name: 'gm', min: 7.4, max: 48.8 },
+  { name: 'roi', min: -36.9, max: 69.5 },
+  { name: 'eps', min: -39.6, max: 51.5 },
+  { name: 'sales', min: -30.5, max: 33.3 } ]
+Technology
+Consumer Electronics
+[ { name: 'marketcap', min: 25.01, max: 2541537 },
+  { name: 'pm', min: -75.7, max: 27.3 },
+  { name: 'gm', min: 7.4, max: 48.8 },
+  { name: 'roi', min: -36.9, max: 69.5 },
+  { name: 'eps', min: -39.6, max: 51.5 },
+  { name: 'sales', min: -30.5, max: 33.3 } ]
+Technology
+Consumer Electronics
+[ { name: 'marketcap', min: 25.01, max: 2541537 },
+  { name: 'pm', min: -75.7, max: 27.3 },
+  { name: 'gm', min: 7.4, max: 48.8 },
+  { name: 'roi', min: -36.9, max: 69.5 },
+  { name: 'eps', min: -39.6, max: 51.5 },
+  { name: 'sales', min: -30.5, max: 33.3 } ]
+Technology
+Consumer Electronics
+[ { name: 'marketcap', min: 25.01, max: 2541537 },
+  { name: 'pm', min: -75.7, max: 27.3 },
+  { name: 'gm', min: 7.4, max: 48.8 },
+  { name: 'roi', min: -36.9, max: 69.5 },
+  { name: 'eps', min: -39.6, max: 51.5 },
+  { name: 'sales', min: -30.5, max: 33.3 } ]
+Technology
+Consumer Electronics
+[ { name: 'marketcap', min: 25.01, max: 2541537 },
+  { name: 'pm', min: -75.7, max: 27.3 },
+  { name: 'gm', min: 7.4, max: 48.8 },
+  { name: 'roi', min: -36.9, max: 69.5 },
+  { name: 'eps', min: -39.6, max: 51.5 },
+  { name: 'sales', min: -30.5, max: 33.3 } ]
+{ percentile: '14' }

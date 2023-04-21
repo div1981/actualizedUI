@@ -1,0 +1,16 @@
+Server started at http://localhost:9191
+received input = 
+{ ticker: 'GROW',
+  titl: '2.5',
+  func: '0.0',
+  total_pay: '-1',
+  sector: 'Financial',
+  industry: 'Asset Management',
+  total_revenue: '17123543' }
+{ Error: connect ECONNREFUSED 127.0.0.1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 5432 }
